@@ -8,11 +8,18 @@
   <div class ="panel-body">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
-    <div class="form-group">
-      <div><%= f.label :email %>
-        <%= f.email_field :email, autofocus: true %>
+
+      <div class="form-group">
+        <div><%= f.label :name %>
+          <%= f.text_field :name, class: "form-control", autofocus: true %>
+        </div>
       </div>
-    </div>
+
+      <div class="form-group">
+        <div><%= f.label :email %>
+          <%= f.email_field :email, class: "form-control",  autofocus: true %>
+        </div>
+      </div>
  
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -20,7 +27,7 @@
       <% end %>
      <div class="form-group">
         <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-          <%= f.password_field :password, autocomplete: "off" %>
+          <%= f.password_field :password, class: "form-control",  autocomplete: "off" %>
         </div>
       </div>
 
@@ -32,7 +39,7 @@
 
       <div class="form-group">
         <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>  
-          <%= f.password_field :current_password, autocomplete: "off" %>
+          <%= f.password_field :current_password, class: "form-control",  autocomplete: "off" %>
         </div>
       </div>
       <div class="form-group">
