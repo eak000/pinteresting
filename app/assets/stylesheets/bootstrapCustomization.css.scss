@@ -18,6 +18,12 @@ $jumbotron-color: #2A2A2A;
 .navbar-brand {
      font-weight: bold;
 }
+.navbar-default 
+.navbar-brand:hover, 
+.navbar-default 
+.navbar-brand:focus {
+  color: #ecf0f1;
+}
 
 .jumbotron h1 {
   font-size: 3em;
